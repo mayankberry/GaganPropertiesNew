@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home 
+{% endblock title %}
+
+{% block body %} 
+
+<!-- Typewriter effect Heading -->
+<div class="home">
+<div class="container2">
+  <h1>Welcome!</h1>
+  <h1>Gagan Properties</h1>
+</div>
+</div>
+
+<!-- About us -->
+<div class="title-content" id="about">
+  <h1 class="heading2"><br>About Us</h1>
+  <hr style="height:2px; border-width:0; color:gray; background-color:gray">
+  <div id="aboutpara">
+  <p>Gagan Properties is a reputed firm with 20 years of field experience. Gagan Berry, who is continuously working to bring revolution in the real estate industry. His hard work and innovative ideas has led "Gagan Berry" towards a great success. The firm was founded by Gagan Berry.
+  </p>
+  <p>
+  A real estate firm to provide you with the most appropriate and suitable properties in Kirti Nagar as per your requirements. Providing you with a professional property consultant to help you find the perfect property.Gagan Berry believes in helping clients by providing them satisfaction and also arranging loans services as per the chosen property. As we have committed to provide a good return to our clients on their property. The firm has gained a lot of reputation by providing excellent service to the buyers. We have always supported our clients, enhanced our skills, managed our time, improved our quality and completed all the projects in time.
+  </p>
+  <p>
+  A home is where memories are made, a home is where we find peace and happiness. A home is what we dream about. A shelter full of love and care. At Gagan Properties we not only help you search one but we give you the full authority to modify and choose a property as per your requirement. The trust and loyalty that we own in the industry itself tells about our hard work and ethical business practices.
+  <br>
+  </p>
+</div>
+</div>
+  
+
+<!--WE OFFER-->
+<div id="services" style="background-color:rgb(239, 239, 239);">
+<div class="title-content">
+<h1 class="headings"><br>We Offer</h1>
+<hr style="height:2px; border-width:0; color:gray; background-color:gray">
+</div>
+
+<div class="container">
+  <div class="row justify-content-md-center" style="margin-bottom: 7vh;">
+    <div class="col col-4">
+      <img src="static/images/consultant.png" alt="..." width="100%">
+    </div>
+    <div class="col col-4">
+      <h1 class="heading1">Real Estate Consultant</h1>
+      <p style="font-size:1.5vw;">The most suitable properties with the help of a professional real estate consultant, we offer you a variety of services with all the latest updates.</p>
+    </div>
+</div>
+<div class="row justify-content-md-center" style="margin-bottom: 7vh;">
+  <div class="col col-4">
+    <h1 class="heading1">One Stop Solution</h1>
+    <p style="font-size:1.5vw;">We are continuously working to provide our clients the best out of all the options.We have our own and independent sources to provide our clients the service of excellence.</p>
+  </div>
+  <div class="col col-4">
+    <img src="static/images/onestop.jpg" alt="..." width="100%">
+  </div>
+</div>
+<div class="row justify-content-md-center" style="margin-bottom: 7vh;">
+  <div class="col col-4">
+    <img src="static/images/budgetfriendly.jpg" alt="..." width="100%">
+  </div>
+  <div class="col col-4">
+    <h1 class="heading1">Budget Friendlyt</h1>
+    <p style="font-size:1.5vw;">Located in Kirti Nagar, Delhi. A firm with 20 years of experience providing our clients with excellent service, without any extra cost or excessive amount. Buy a beautiful property at a reasonable price without any complaints.</p>
+  </div>
+</div>
+<div class="row justify-content-md-center" style="margin-bottom: 7vh;">
+  <div class="col col-4">
+    <h1 class="heading1">Loan Facilities</h1>
+    <p style="font-size:1.5vw;">Loan facilities are provided to our clients based upon the criteria and the minimum budget requirement to invest in a property with proper guidance.</p>
+  </div>
+  <div class="col col-4">
+    <img src="static/images/loan1.jpg" alt="..." width="100%">
+  </div>
+</div>
+
+</div>
+</div>
+
+<!-- Contact -->
+
+<div class="container" id="contact">
+	<div class="row">
+			<h1 class="headings">Contact Us</h1>
+	</div>
+	<div class="row">
+			<h4 style="text-align:center">We'd love to hear from you!</h4>
+	</div>
+  <form method="POST" action="\contact">
+    {% csrf_token %}
+	<div class="row input-container">
+			<div class="col-xs-12">
+    <div class="form-group">
+				<div class="styled-input wide">
+					<input type="text" required id="name" name="name"/>
+					<label>Name</label> 
+				</div>
+			</div>
+    </div>
+			<div class="col-md-6 col-sm-12">
+    <div class="form-group">
+				<div class="styled-input">
+					<input type="email" required id="email" name="email" />
+					<label>Email</label> 
+				</div>
+			</div>
+    </div>
+			<div class="col-md-6 col-sm-12">
+    <div class="form-group">
+				<div class="styled-input" style="float:right;">
+					<input type="phone" required id="phone" name="phone" />
+					<label>Phone Number</label> 
+				</div>
+			</div>
+    </div>
+			<div class="col-xs-12">
+    <div class="form-group">
+				<div class="styled-input wide">
+					<textarea required style="resize:none;" id="desc" name="desc" ></textarea>
+					<label>Message</label>
+				</div>
+			</div>
+    </div>
+			<div class="col-xs-12">
+				<button class="btn-lrg submit-btn" type="submit">Send Message</button>
+			</div>
+	</div>
+</form>
+</div>
+{% endblock body %} 

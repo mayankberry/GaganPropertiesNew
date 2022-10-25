@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Data
+{% endblock title %}
+
+{% block body %}
+
+<!-- Listings -->
+<div style="margin-top:10vh;">
+    <form method="GET" action="/search">
+        <div class="row input-container">
+            <div class="col-xs-12">
+                <div class="form-group">
+        <center><input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="query" id="query" style="width:50%;"></center>
+        </div>
+    </div>
+    <div class="col-xs-12">
+    <button class="btn-lrg submit-btn" type="submit">Search</button>
+        </div>
+    </div>
+    </form>
+{% for data in alldata %}
+<div>
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-lg h-md-250 my-4 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+            <h3 class="mb-0" style="font-family: Arial; text-shadow: 1px 1px 0 #000">Name - {{data.dname}}</h3>
+            <h3 class="mb-0" style="font-family: Arial; text-shadow: 1px 1px 0 #000">Address - {{data.daddress}}</h3>
+            <h3 class="mb-0" style="font-family: Arial; text-shadow: 1px 1px 0 #000">Phone No. - {{data.dphone}}</h3> 
+            <h3 class="mb-0" style="font-family: Arial; text-shadow: 1px 1px 0 #000">Description - {{data.ddesc}}</h3>      
+</div>
+</div>
+</div>
+{% endfor %}
+</div>
+{% endblock body %}

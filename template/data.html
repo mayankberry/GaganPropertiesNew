@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Data
+{% endblock title %}
+
+{% block body %}
+
+<div class="container" id="data" style="margin-top:10vh;">
+    <div class="row">
+        <h1 class="headings">My Listings </h1>
+    </div>
+    <form method="POST" action="\data">
+        {% csrf_token %}
+        <div class="row input-container">
+            <div class="col-xs-12">
+                <div class="form-group">
+                    <div class="styled-input wide">
+                        <input type="text" id="dname" name="dname" />
+                        <label>Name</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="form-group">
+                    <div class="styled-input">
+                        <input type="text" id="daddress" name="daddress" />
+                        <label>Address</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="form-group">
+                    <div class="styled-input" style="float:right;">
+                        <input type="phone" id="dphone" name="dphone" />
+                        <label>Phone Number</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="form-group">
+                    <div class="styled-input wide">
+                        <textarea style="resize:none;" id="ddesc" name="ddesc"></textarea>
+                        <label>Description</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <button class="btn-lrg submit-btn" type="submit">Submit</button>
+                <a class="btn-lrg submit-btn" href="/listings">Listings</a>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock body %}

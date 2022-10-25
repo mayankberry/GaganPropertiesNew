@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+My Space
+{% endblock title %}
+
+{% block body %} 
+
+<div class="conatiner" style="margin-top:10vh;">
+    <form method="POST" action="/handlelogin">
+       {% csrf_token %}
+       <div class="row input-container">
+        <div class="col-xs-12">
+        <div class="form-group">
+            <div class="styled-input wide">
+                <input type="text" required id="username" name="username"/>
+                <label>Username</label> 
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row input-container">
+    <div class="col-xs-12">
+    <div class="form-group">
+        <div class="styled-input wide">
+            <input type="password" required id="password" name="password"/>
+            <label>Password</label> 
+        </div>
+    </div>
+</div>
+<div class="col-xs-12">
+    <button class="btn-lrg submit-btn" type="submit">Login</button>
+</div>
+</div>
+</form>
+</div>
+
+{% endblock body %} 
